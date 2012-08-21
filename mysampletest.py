@@ -17,6 +17,7 @@ class mysampletest(mytestcase):
         t = timeit.Timer(stmt="lst = ['c' for x in xrange(100)]")
         self.debug(t.timeit())
     
+    @attr(speed="fast")
     @attr(tags=["advanced"])
     def test_second(self):
         t = timeit.Timer(stmt="lst = ['c'] * 100")
